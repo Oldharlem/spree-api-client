@@ -4,6 +4,8 @@ require "spree-api-client/version"
 require 'spree-api-client/connection'
 require 'spree-api-client/request'
 
+require 'spree-api-client/users'
+require 'spree-api-client/checkouts'
 require 'spree-api-client/products'
 require 'spree-api-client/variants'
 require 'spree-api-client/orders'
@@ -24,6 +26,8 @@ module Spree
       include Spree::API::Client::Connection
       include Spree::API::Client::Request
 
+      include Spree::API::Client::Users
+      include Spree::API::Client::Checkouts
       include Spree::API::Client::Products
       include Spree::API::Client::Variants
       include Spree::API::Client::Orders
