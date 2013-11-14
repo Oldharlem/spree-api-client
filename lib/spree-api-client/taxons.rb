@@ -2,11 +2,21 @@ module Spree
   module API
     class Client
       module Taxons
-        def taxons(taxonomy_id, options={})
+        
+        def character_taxon(internal_tag, options={})
+          get("taxons/character/#{internal_tag}", options)
+        end
+
+        def taxons(taxon_ids, options={})
+          return [] unless taxon_ids.length
+          get("taxons/?ids=#{taxon_ids.join(',')}", options)
+        end
+
+        def taxonomy_taxons(taxonomy_id, options={})
           get("taxonomies/#{taxonomy_id}/taxons", options)
         end
 
-        def taxon(taxonomy_id, taxon_id, options={})
+        def taxonomy_taxon(taxonomy_id, taxon_id, options={})
           get("taxonomies/#{taxonomy_id}/taxons/#{taxon_id}", options)
         end
 
