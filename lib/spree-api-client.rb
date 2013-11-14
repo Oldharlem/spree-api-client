@@ -45,7 +45,7 @@ module Spree
       include Spree::API::Client::CreditCards
 
       attr_accessor :api_endpoint, :api_token, :per_page, :locale
-      def initialize(api_endpoint, api_token, locale, options={})
+      def initialize(api_endpoint, api_token, locale="en-US", options={})
         @api_endpoint = api_endpoint
         @api_token = api_token
         @locale = locale
