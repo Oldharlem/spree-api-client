@@ -7,6 +7,7 @@ require 'spree-api-client/request'
 require 'spree-api-client/users'
 require 'spree-api-client/checkouts'
 require 'spree-api-client/credit_cards'
+require 'spree-api-client/adjustments'
 require 'spree-api-client/products'
 require 'spree-api-client/variants'
 require 'spree-api-client/orders'
@@ -43,6 +44,7 @@ module Spree
       include Spree::API::Client::Payments
       include Spree::API::Client::Shipments
       include Spree::API::Client::CreditCards
+      include Spree::API::Client::Adjustments
 
       attr_accessor :api_endpoint, :api_token, :per_page, :locale
       def initialize(api_endpoint, api_token, locale="en-US", options={})
