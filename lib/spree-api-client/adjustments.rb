@@ -6,7 +6,7 @@ module Spree
           get("adjustments/#{id}", options)
         end
 
-        def adjustments((options={})
+        def adjustments(options={})
           get('adjustments', options)
         end
 
