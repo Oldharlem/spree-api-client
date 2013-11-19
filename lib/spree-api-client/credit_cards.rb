@@ -5,6 +5,10 @@ module Spree
         def credit_card(id, options={})
           get("credit_cards/#{id}", options)
         end
+
+        def credit_cards(options={})
+          get('credit_cards', options)
+        end
       end
     end
   end
