@@ -7,7 +7,7 @@ module Spree
         end
 
         def credit_cards(options={})
-          get('credit_cards', options)
+          get('credit_cards', options)["credit_cards"]
         end
       end
     end

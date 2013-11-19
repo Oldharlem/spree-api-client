@@ -8,7 +8,7 @@ module Spree
 
         #get addresses by user
         def addresses(options={})
-          get("addresses",options)
+          get("addresses",options)["addresses"]
         end
 
         def update_address(id, options={})
