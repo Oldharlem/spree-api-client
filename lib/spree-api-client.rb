@@ -11,7 +11,6 @@ require 'spree-api-client/adjustments'
 require 'spree-api-client/products'
 require 'spree-api-client/variants'
 require 'spree-api-client/orders'
-require 'spree-api-client/taxonomies'
 require 'spree-api-client/addresses'
 require 'spree-api-client/countries'
 require 'spree-api-client/zones'
@@ -20,7 +19,6 @@ require 'spree-api-client/line_items'
 require 'spree-api-client/return_authorizations'
 require 'spree-api-client/taxons'
 require 'spree-api-client/payments'
-require 'spree-api-client/shipments'
 require 'spree-api-client/promotions'
 
 module Spree
@@ -34,7 +32,6 @@ module Spree
       include Spree::API::Client::Products
       include Spree::API::Client::Variants
       include Spree::API::Client::Orders
-      include Spree::API::Client::Taxonomies
       include Spree::API::Client::Addresses
       include Spree::API::Client::Countries
       include Spree::API::Client::Zones
@@ -43,7 +40,6 @@ module Spree
       include Spree::API::Client::ReturnAuthorizations
       include Spree::API::Client::Taxons
       include Spree::API::Client::Payments
-      include Spree::API::Client::Shipments
       include Spree::API::Client::CreditCards
       include Spree::API::Client::Adjustments
       include Spree::API::Client::Promotions
