@@ -5,15 +5,15 @@ module Spree
         def checkouts(options={})
           get('checkouts', options)['checkouts']
         end
-        
+
         def checkout(order_number, options={})
           get("checkouts/#{order_number}", options)
         end
-        
+
         def create_checkout(options={})
           post("checkouts", options)
         end
-        
+
         def update_checkout(order_number, options={})
           put("checkouts/#{order_number}", options)
         end

@@ -29,11 +29,11 @@ module Spree
         def purchase_payment(order_number, payment_id, options={})
           put("orders/#{order_number}/payments/#{payment_id}/purchase", options)
         end
-        
+
         def void_payment(order_number, payment_id, options={})
-          put("orders/#{order_number}/payments/#{payment_id}.void", options)
+          put("orders/#{order_number}/payments/#{payment_id}/void", options)
         end
-        
+
         def credit_payment(order_number, payment_id, options={})
           put("orders/#{order_number}/payments/#{payment_id}/credit", options)
         end
