@@ -3,7 +3,7 @@ module Spree
     class Client
       module Products
         def products(options={})
-          get('products', options)['products']
+          get('products', options)
         end
         
         def product(permalink_or_id, options={})
