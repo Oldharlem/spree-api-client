@@ -18,6 +18,10 @@ module Spree
           Hashie::Mash.new self.class.post("orders", options)
         end
 
+        def cancel_order(order_number, options={})
+          Hashie::Mash.new self.class.put("orders/#{order_number}/cancel", options)
+        end
+
         def update_order(order_number, options={})
           Hashie::Mash.new self.class.put("orders/#{order_number}", options)
         end
