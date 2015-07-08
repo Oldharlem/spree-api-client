@@ -10,6 +10,7 @@ require 'spree-api-client/adjustments'
 require 'spree-api-client/products'
 require 'spree-api-client/variants'
 require 'spree-api-client/orders'
+require 'spree-api-client/taxonomies'
 require 'spree-api-client/addresses'
 require 'spree-api-client/countries'
 require 'spree-api-client/zones'
@@ -36,6 +37,7 @@ module Spree
       include Spree::API::Client::Products
       include Spree::API::Client::Variants
       include Spree::API::Client::Orders
+      include Spree::API::Client::Taxonomies
       include Spree::API::Client::Addresses
       include Spree::API::Client::Countries
       include Spree::API::Client::Zones
