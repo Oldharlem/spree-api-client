@@ -32,7 +32,6 @@ module Spree
             end
 
           rescue Faraday::Error::ClientError => error
-            puts error
             raise Spree::API::Client::Error::ClientError.new(error)
           end
 
