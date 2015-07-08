@@ -1,5 +1,6 @@
 require "spree-api-client/version"
 
+require 'faraday_middleware'
 require 'spree-api-client/connection'
 require 'spree-api-client/request'
 
@@ -27,9 +28,7 @@ require 'spree-api-client/promotions'
 module Spree
   module API
     class Client
-
-      include HTTParty
-
+      include Spree::API::Client::Connection
       include Spree::API::Client::Request
 
       include Spree::API::Client::Users
@@ -57,9 +56,7 @@ module Spree
       attr_accessor :api_endpoint, :api_token, :per_page, :locale
       def initialize(api_endpoint, api_token, locale="en-US", options={})
         @api_endpoint = api_endpoint
-        self.class.base_uri "#{api_endpoint}/"
         @api_token = api_token
-        self.class.headers 'X-Spree-Token' => api_token
         @locale = locale
         @per_page = options.fetch(:per_page, 30)
       end
