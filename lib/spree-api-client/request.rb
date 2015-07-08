@@ -1,4 +1,5 @@
 require 'spree-api-client/error'
+require 'multi_json'
 
 module Spree
   module API
@@ -31,6 +32,7 @@ module Spree
             end
 
           rescue Faraday::Error::ClientError => error
+            puts error
             raise Spree::API::Client::Error::ClientError.new(error)
           end
 

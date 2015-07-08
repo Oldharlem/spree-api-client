@@ -3,7 +3,7 @@ module Spree
     class Client
       module Orders
         def orders(options={})
-          get('orders', options)
+          get('orders', options)['orders']
         end
 
         def order(order_number, options={})

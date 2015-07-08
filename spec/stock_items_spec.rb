@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Spree::API::Client::StockItems do
-  vcr_options = { :cassette_name =>  "stock_items", :record => :new_episodes }
+  vcr_options = { :cassette_name =>  "stock_items" }
   describe 'stock_items', vcr: vcr_options do
     it 'should load stock_items' do
       client = Spree::API::Client.new('http://localhost:4000/api', 'a8f2f3143f4d72f4f358eaaa1b73c660e314c4d5f55a404f')

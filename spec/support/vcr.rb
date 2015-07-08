@@ -1,4 +1,3 @@
-p 'VCR'
 require 'vcr'
 
 VCR.configure do |c|

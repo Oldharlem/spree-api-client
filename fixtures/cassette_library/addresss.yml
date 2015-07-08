@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/store/api/addresses/1?per_page=30
+    uri: http://localhost:4000/store/api/addresses/1?locale=en-US&per_page=30
     body:
       encoding: US-ASCII
       string: ''
@@ -41,6 +41,6 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ! '{"error":"translation missing: en-GB.spree.api.resource_not_found"}'
-    http_version: 
+    http_version:
   recorded_at: Fri, 07 Dec 2012 17:34:22 GMT
 recorded_with: VCR 2.3.0

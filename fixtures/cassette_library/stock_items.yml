@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4000/api/stock_locations/1/stock_items/?locale=en-US&per_page=30
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept:
+      - application/json
+      X-Spree-Token:
+      - a8f2f3143f4d72f4f358eaaa1b73c660e314c4d5f55a404f
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - guest_token=InJTZTRSMkdhQlN4VTVuYmd3N0p4VGci--0d3f6d144446a9d5f7aeb509a0bb492a44dcd58f;
+        path=/; expires=Sun, 08 Jul 2035 07:51:48 -0000
+      X-Request-Id:
+      - f1e33eee-dac6-4376-ad83-5a25b051fe56
+      X-Runtime:
+      - '2.607792'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"error":"Invalid API key (a8f2f3143f4d72f4f358eaaa1b73c660e314c4d5f55a404f)
+        specified."}'
+    http_version: 
+  recorded_at: Wed, 08 Jul 2015 07:51:50 GMT
+recorded_with: VCR 2.9.3

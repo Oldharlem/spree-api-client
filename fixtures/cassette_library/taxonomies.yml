@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/store/api/taxonomies?per_page=30
+    uri: http://localhost:4000/store/api/taxonomies?locale=en-US&per_page=30
     body:
       encoding: US-ASCII
       string: ''

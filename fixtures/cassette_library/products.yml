@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/store/api/products?per_page=30
+    uri: http://localhost:4000/store/api/products?locale=en-US&per_page=30
     body:
       encoding: US-ASCII
       string: ''
@@ -61,6 +61,6 @@ http_interactions:
         3","count_on_hand":0,"sku":"","price":"14.0","weight":null,"height":null,"width":null,"depth":null,"is_master":false,"cost_price":null,"permalink":"whitelines-3","option_values":[{"option_value":{"id":2,"name":"Medium","presentation":"Medium","option_type_name":"Size","option_type_id":1}}]}},{"variant":{"id":29,"name":"Whitelines
         3","count_on_hand":0,"sku":"","price":"14.0","weight":null,"height":null,"width":null,"depth":null,"is_master":false,"cost_price":null,"permalink":"whitelines-3","option_values":[{"option_value":{"id":3,"name":"Large","presentation":"Large","option_type_name":"Size","option_type_id":1}}]}},{"variant":{"id":30,"name":"Whitelines
         3","count_on_hand":0,"sku":"","price":"14.0","weight":null,"height":null,"width":null,"depth":null,"is_master":false,"cost_price":null,"permalink":"whitelines-3","option_values":[{"option_value":{"id":4,"name":"XL","presentation":"XL","option_type_name":"Size","option_type_id":1}}]}}],"images":[{"image":{"id":14,"position":1,"attachment_content_type":"image/jpeg","attachment_file_name":"WL_2011_Tshirt2_copy_2.jpg","type":"Spree::Image","attachment_updated_at":"2012-11-05T12:10:02Z","attachment_width":652,"attachment_height":586,"alt":"","viewable_type":"Spree::Variant","viewable_id":22}}],"option_types":[{"option_type":{"id":1,"name":"Size","presentation":"Size","position":0,"option_values":[{"option_value":{"id":1,"name":"Small","presentation":"Small","option_type_name":"Size","option_type_id":1}},{"option_value":{"id":2,"name":"Medium","presentation":"Medium","option_type_name":"Size","option_type_id":1}},{"option_value":{"id":3,"name":"Large","presentation":"Large","option_type_name":"Size","option_type_id":1}},{"option_value":{"id":4,"name":"XL","presentation":"XL","option_type_name":"Size","option_type_id":1}}]}}],"product_properties":[{"product_property":{"id":6,"product_id":6,"property_id":2,"value":null,"property_name":"Brand"}}]}}]}'
-    http_version: 
+    http_version:
   recorded_at: Fri, 07 Dec 2012 17:37:15 GMT
 recorded_with: VCR 2.3.0
