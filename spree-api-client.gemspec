@@ -20,9 +20,11 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'hashie', '~> 2.0'
   gem.add_dependency 'multi_json', '~> 1.4'
+  gem.add_dependency 'httparty'#, '~> 0.9'
 
   gem.add_development_dependency 'webmock'
   gem.add_development_dependency 'vcr'
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
+  # gem.add_development_dependency 'pry'
 end

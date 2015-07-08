@@ -21,8 +21,6 @@ require 'spree-api-client/return_authorizations'
 require 'spree-api-client/taxons'
 require 'spree-api-client/payments'
 require 'spree-api-client/shipments'
-require 'spree-api-client/users'
-require 'spree-api-client/stock_items'
 require 'spree-api-client/promotions'
 
 module Spree
@@ -49,11 +47,10 @@ module Spree
       include Spree::API::Client::Taxons
       include Spree::API::Client::Payments
       include Spree::API::Client::Shipments
-      include Spree::API::Client::Users
-      include Spree::API::Client::StockItems
       include Spree::API::Client::CreditCards
       include Spree::API::Client::Adjustments
       include Spree::API::Client::Promotions
+      include Spree::API::Client::Checkouts
 
       attr_accessor :api_endpoint, :api_token, :per_page, :locale
       def initialize(api_endpoint, api_token, locale="en-US", options={})
