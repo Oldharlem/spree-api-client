@@ -6,5 +6,5 @@ require 'webmock/rspec'
 require 'support/vcr'
 
 RSpec.configure do |config|
-  config.extend VCR::RSpec::Macros
+  # config.extend VCR::RSpec::Macros
 end

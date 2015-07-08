@@ -20,10 +20,10 @@ describe Spree::API::Client do
       client.api_token.should eql('randomtokenstring')
     end
   end
-  
+
   describe 'request' do
-    use_vcr_cassette "request", :record => :new_episodes
-    it 'should load stuff from the api' do
+    vcr_options = { :cassette_name =>  "request", :record => :new_episodes }
+    it 'should load stuff from the api', vcr: vcr_options do
       client = Spree::API::Client.new('http://localhost:4000/store/api', 'randomtokenstring')
       response = client.request(:get, 'products')
       response.should be_a(Faraday::Response)
