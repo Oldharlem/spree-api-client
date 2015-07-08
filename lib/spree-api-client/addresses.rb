@@ -5,7 +5,12 @@ module Spree
         def address(id, options={})
           get("addresses/#{id}", options)
         end
-        
+
+        #get addresses by user
+        def addresses(options={})
+          get("addresses",options)["addresses"]
+        end
+
         def update_address(id, options={})
           put("addresses/#{id}", options)
         end

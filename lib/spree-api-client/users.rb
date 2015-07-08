@@ -14,14 +14,17 @@ module Spree
           post("users", options)
         end
 
-        def update_user(user_id, options={})
+        def delete_user(id, options={})
+          delete("users/#{id}", options)
+        end
+
+        def update_users(user_id, options={})
           put("users/#{user_id}", options)
         end
 
-        def delete_user(user_id, options={})
-          delete("users/#{user_id}", options)
+        def create_anonymous_user(options={})
+          post("anonymous_users", options)
         end
-
       end
     end
   end
