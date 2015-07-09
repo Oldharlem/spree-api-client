@@ -5,7 +5,7 @@ http_interactions:
     uri: http://localhost:4000/store/api/shipments/2/ready
     body:
       encoding: UTF-8
-      string: ''
+      string: '{"locale":"en-US"}'
     headers:
       User-Agent:
       - Faraday v0.9.1
@@ -13,8 +13,8 @@ http_interactions:
       - application/json
       X-Spree-Token:
       - b56019f04b61a50553ee323f5ab68c6b435871971e79c987
-      Content-Length:
-      - '0'
+      Content-Type:
+      - application/json
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response:
@@ -33,23 +33,23 @@ http_interactions:
       Cache-Control:
       - no-cache
       X-Request-Id:
-      - 783a37d6-2f8e-48ac-9d7f-df26a97b91c6
+      - b403d2ba-bfbb-46aa-8692-cac9fb624a75
       X-Runtime:
-      - '0.301335'
+      - '0.300253'
       Server:
       - WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)
       Date:
-      - Wed, 08 Jul 2015 16:20:48 GMT
+      - Thu, 09 Jul 2015 13:39:11 GMT
       Content-Length:
       - '34'
       Connection:
       - Keep-Alive
       Set-Cookie:
-      - guest_token=IjBvU2NGeEIwa2ZuLXRBR19vdHN2TGci--3db34d1e9db05f067d470ba4ec9eb1491d67e395;
-        path=/; expires=Sun, 08 Jul 2035 16:20:48 -0000
+      - guest_token=InhKc1l6aWZ0Zk5tbUdrRnE3WDNvVkEi--7cd1f441cd9817d44fd312cc13b5b47d9b92057c;
+        path=/; expires=Mon, 09 Jul 2035 13:39:11 -0000
     body:
       encoding: UTF-8
       string: '{"error":"Cannot ready shipment."}'
     http_version: 
-  recorded_at: Wed, 08 Jul 2015 16:20:48 GMT
+  recorded_at: Thu, 09 Jul 2015 13:39:11 GMT
 recorded_with: VCR 2.9.3
