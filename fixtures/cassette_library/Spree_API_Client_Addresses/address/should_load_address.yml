@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:4000/store/api/orders/R123456789/addresses/2?locale=en-US&per_page=30
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept:
+      - application/json
+      X-Spree-Token:
+      - b56019f04b61a50553ee323f5ab68c6b435871971e79c987
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"b32b7b8f82d30190d9ca4d49b07e98fb"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 8e4dbc35-f386-4b34-af2e-8f6af3cae04d
+      X-Runtime:
+      - '0.297846'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)
+      Date:
+      - Thu, 09 Jul 2015 13:32:31 GMT
+      Content-Length:
+      - '485'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - guest_token=Ijd5cU5FUkRpcGFXSlNuWFFTbWdtWFEi--3d27ef099947a34ccd594f20cf3e0030668129cd;
+        path=/; expires=Mon, 09 Jul 2035 13:32:31 -0000
+    body:
+      encoding: UTF-8
+      string: '{"id":2,"firstname":"Carrie","lastname":"Yundt","full_name":"Carrie
+        Yundt","address1":"2109 Bret Turnpike","address2":"Apt. 181","city":"Abernathy
+        City","zipcode":"16804","phone":"492.095.4181 x5681","company":null,"alternative_phone":null,"country_id":232,"state_id":3561,"state_name":null,"state_text":"NY","country":{"id":232,"iso_name":"UNITED
+        STATES","iso":"US","iso3":"USA","name":"United States","numcode":840},"state":{"id":3561,"name":"New
+        York","abbr":"NY","country_id":232}}'
+    http_version: 
+  recorded_at: Thu, 09 Jul 2015 13:32:31 GMT
+recorded_with: VCR 2.9.3
