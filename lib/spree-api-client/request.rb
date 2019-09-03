@@ -1,4 +1,5 @@
 require 'spree-api-client/error'
+require 'multi_json'
 
 module Spree
   module API
@@ -16,9 +17,11 @@ module Spree
                 request.headers['X-Spree-Token'] = token
               end
 
+              options.merge!(:locale => locale)
+
               case method
               when :get
-                options.merge(:per_page => per_page)
+                options[:per_page] = per_page unless options[:per_page]
                 request.url(path, options)
               when :delete, :head
                 request.url(path, options)

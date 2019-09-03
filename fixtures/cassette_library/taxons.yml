@@ -2,47 +2,59 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/store/api/taxonomies/1/taxons?per_page=30
+    uri: http://localhost:4000/store/api/taxonomies/1/taxons?locale=en-US&per_page=30
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.9.1
       Accept:
       - application/json
       X-Spree-Token:
       - b56019f04b61a50553ee323f5ab68c6b435871971e79c987
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: 'OK '
     headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
-      - application/json
-      X-Ua-Compatible:
-      - IE=Edge
+      - application/json; charset=utf-8
       Etag:
-      - ! '"d751713988987e9331980363e24189ce"'
+      - W/"bcc0eb61da4cbd983ff4d4659f6acff8"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 92ea82cb431abd35b20ab737cd348ecd
+      - 9be9be1b-e157-4102-b6a7-4ff9e580c6b3
       X-Runtime:
-      - '0.033542'
-      Content-Length:
-      - '2'
+      - '0.114618'
       Server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-02-16)
+      - WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)
       Date:
-      - Fri, 07 Dec 2012 17:37:16 GMT
+      - Wed, 08 Jul 2015 15:53:11 GMT
+      Content-Length:
+      - '837'
       Connection:
       - Keep-Alive
+      Set-Cookie:
+      - guest_token=IlZJNUR1OXJrMlFFejJLazQwd0NxWVEi--595ea9ba2e4093912d061e9ce62870e553739d32;
+        path=/; expires=Sun, 08 Jul 2035 15:53:10 -0000
     body:
-      encoding: US-ASCII
-      string: ! '[]'
+      encoding: UTF-8
+      string: '{"count":3,"total_count":3,"current_page":1,"per_page":"30","pages":1,"taxons":[{"taxons":[],"id":3,"name":"Bags","pretty_name":"Categories
+        -\u003e Bags","permalink":"categories/bags","parent_id":1,"taxonomy_id":1},{"taxons":[],"id":4,"name":"Mugs","pretty_name":"Categories
+        -\u003e Mugs","permalink":"categories/mugs","parent_id":1,"taxonomy_id":1},{"taxons":[{"taxons":[],"id":6,"name":"Shirts","pretty_name":"Categories
+        -\u003e Clothing -\u003e Shirts","permalink":"categories/clothing/shirts","parent_id":5,"taxonomy_id":1},{"taxons":[],"id":7,"name":"T-Shirts","pretty_name":"Categories
+        -\u003e Clothing -\u003e T-Shirts","permalink":"categories/clothing/t-shirts","parent_id":5,"taxonomy_id":1}],"id":5,"name":"Clothing","pretty_name":"Categories
+        -\u003e Clothing","permalink":"categories/clothing","parent_id":1,"taxonomy_id":1}]}'
     http_version: 
-  recorded_at: Fri, 07 Dec 2012 17:37:16 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Wed, 08 Jul 2015 15:53:11 GMT
+recorded_with: VCR 2.9.3

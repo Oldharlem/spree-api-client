@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/store/api/orders/R781501551/return_authorizations?per_page=30
+    uri: http://localhost:4000/store/api/orders/R781501551/return_authorizations?locale=en-US&per_page=30
     body:
       encoding: US-ASCII
       string: ''

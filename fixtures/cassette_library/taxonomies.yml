@@ -2,47 +2,61 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/store/api/taxonomies?per_page=30
+    uri: http://localhost:4000/store/api/taxonomies?locale=en-US&per_page=30
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.9.1
       Accept:
       - application/json
       X-Spree-Token:
       - b56019f04b61a50553ee323f5ab68c6b435871971e79c987
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: 'OK '
     headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
-      - application/json
-      X-Ua-Compatible:
-      - IE=Edge
+      - application/json; charset=utf-8
       Etag:
-      - ! '"6d4a78870b076c5a43e1017631e3a2a5"'
+      - W/"d77fba7f7ff0964ee7fc0ed59a7af1dd"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 818109a0d62f745696fad81744dbfd74
+      - db183f4f-4ff8-4ad1-89ad-e8ca3d835558
       X-Runtime:
-      - '0.141291'
-      Content-Length:
-      - '522'
+      - '0.172052'
       Server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-02-16)
+      - WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)
       Date:
-      - Fri, 07 Dec 2012 17:37:16 GMT
+      - Wed, 08 Jul 2015 15:48:52 GMT
+      Content-Length:
+      - '1202'
       Connection:
       - Keep-Alive
+      Set-Cookie:
+      - guest_token=ImNKWFd1cVJwYW5LbDdzZ2ZPcUlQYVEi--8488b9fe70b8c8788da14f8d3d7967c875e824cf;
+        path=/; expires=Sun, 08 Jul 2035 15:48:52 -0000
     body:
-      encoding: US-ASCII
-      string: ! '{"count":3,"current_page":1,"pages":1,"taxonomies":[{"taxonomy":{"id":3,"name":"ridebmx","root":{"id":3,"name":"ridebmx","permalink":"ridebmx","position":0,"parent_id":null,"taxonomy_id":3,"taxons":[]}}},{"taxonomy":{"id":1,"name":"rideukbmx","root":{"id":1,"name":"rideukbmx","permalink":"ridebmx","position":0,"parent_id":null,"taxonomy_id":1,"taxons":[]}}},{"taxonomy":{"id":2,"name":"whitelines","root":{"id":2,"name":"whitelines","permalink":"whitelines","position":0,"parent_id":null,"taxonomy_id":2,"taxons":[]}}}]}'
+      encoding: UTF-8
+      string: '{"count":2,"current_page":1,"pages":1,"taxonomies":[{"id":1,"name":"Categories","root":{"id":1,"name":"Categories","pretty_name":"Categories","permalink":"categories","parent_id":null,"taxonomy_id":1,"taxons":[{"id":3,"name":"Bags","pretty_name":"Categories
+        -\u003e Bags","permalink":"categories/bags","parent_id":1,"taxonomy_id":1},{"id":4,"name":"Mugs","pretty_name":"Categories
+        -\u003e Mugs","permalink":"categories/mugs","parent_id":1,"taxonomy_id":1},{"id":5,"name":"Clothing","pretty_name":"Categories
+        -\u003e Clothing","permalink":"categories/clothing","parent_id":1,"taxonomy_id":1}]}},{"id":2,"name":"Brand","root":{"id":2,"name":"Brand","pretty_name":"Brand","permalink":"brand","parent_id":null,"taxonomy_id":2,"taxons":[{"id":8,"name":"Ruby","pretty_name":"Brand
+        -\u003e Ruby","permalink":"brand/ruby","parent_id":2,"taxonomy_id":2},{"id":9,"name":"Apache","pretty_name":"Brand
+        -\u003e Apache","permalink":"brand/apache","parent_id":2,"taxonomy_id":2},{"id":10,"name":"Spree","pretty_name":"Brand
+        -\u003e Spree","permalink":"brand/spree","parent_id":2,"taxonomy_id":2},{"id":11,"name":"Rails","pretty_name":"Brand
+        -\u003e Rails","permalink":"brand/rails","parent_id":2,"taxonomy_id":2}]}}]}'
     http_version: 
-  recorded_at: Fri, 07 Dec 2012 17:37:16 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Wed, 08 Jul 2015 15:48:52 GMT
+recorded_with: VCR 2.9.3

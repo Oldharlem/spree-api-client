@@ -2,47 +2,55 @@
 http_interactions:
 - request:
     method: get
-    uri: http://localhost:4000/store/api/products/1/product_properties?per_page=30
+    uri: http://localhost:4000/store/api/products/1/product_properties?locale=en-US&per_page=30
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      User-Agent:
+      - Faraday v0.9.1
       Accept:
       - application/json
       X-Spree-Token:
       - b56019f04b61a50553ee323f5ab68c6b435871971e79c987
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      User-Agent:
-      - Ruby
   response:
     status:
       code: 200
-      message: ! 'OK '
+      message: 'OK '
     headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
       Content-Type:
-      - application/json
-      X-Ua-Compatible:
-      - IE=Edge
+      - application/json; charset=utf-8
       Etag:
-      - ! '"6f9c87e8ee8667300cf802098fd88155"'
+      - W/"57db8aa0e3db266a1178c105ed989ef3"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7c789d8104188f51ee174eff0e5f90d3
+      - 23e70c83-2b10-4541-b893-e9120eaa2c23
       X-Runtime:
-      - '0.126097'
-      Content-Length:
-      - '159'
+      - '0.111282'
       Server:
-      - WEBrick/1.3.1 (Ruby/1.9.3/2012-02-16)
+      - WEBrick/1.3.1 (Ruby/2.2.2/2015-04-13)
       Date:
-      - Fri, 07 Dec 2012 17:37:15 GMT
+      - Wed, 08 Jul 2015 15:48:55 GMT
+      Content-Length:
+      - '319'
       Connection:
       - Keep-Alive
+      Set-Cookie:
+      - guest_token=IkJNRDVhM05WNzBnTFZ1WHBLT2JNY2ci--3cd840671f49f5730e6e9caf6b81274fc9afd348;
+        path=/; expires=Sun, 08 Jul 2035 15:48:54 -0000
     body:
-      encoding: US-ASCII
-      string: ! '{"count":1,"current_page":1,"pages":1,"product_properties":[{"product_property":{"id":1,"product_id":1,"property_id":2,"value":null,"property_name":"Brand"}}]}'
+      encoding: UTF-8
+      string: '{"count":3,"current_page":1,"pages":1,"product_properties":[{"id":25,"product_id":1,"property_id":9,"value":"Tote","property_name":"Type"},{"id":26,"product_id":1,"property_id":10,"value":"15\"
+        x 18\" x 6\"","property_name":"Size"},{"id":27,"product_id":1,"property_id":11,"value":"Canvas","property_name":"Material"}]}'
     http_version: 
-  recorded_at: Fri, 07 Dec 2012 17:37:15 GMT
-recorded_with: VCR 2.3.0
+  recorded_at: Wed, 08 Jul 2015 15:48:55 GMT
+recorded_with: VCR 2.9.3

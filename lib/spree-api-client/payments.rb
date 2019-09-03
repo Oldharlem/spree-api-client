@@ -3,6 +3,7 @@ module Spree
     class Client
       module Payments
         def payments(order_number, options={})
+
           get("orders/#{order_number}/payments", options)['payments']
         end
 
@@ -29,11 +30,11 @@ module Spree
         def purchase_payment(order_number, payment_id, options={})
           put("orders/#{order_number}/payments/#{payment_id}/purchase", options)
         end
-        
+
         def void_payment(order_number, payment_id, options={})
-          put("orders/#{order_number}/payments/#{payment_id}.void", options)
+          put("orders/#{order_number}/payments/#{payment_id}/void", options)
         end
-        
+
         def credit_payment(order_number, payment_id, options={})
           put("orders/#{order_number}/payments/#{payment_id}/credit", options)
         end
