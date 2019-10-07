@@ -6,11 +6,11 @@ require 'spree-api-client/version'
 Gem::Specification.new do |gem|
   gem.name          = "spree-api-client"
   gem.version       = Spree::API::Client::VERSION
-  gem.authors       = ["Andrew Nesbitt"]
-  gem.email         = ["andrewnez@gmail.com"]
+  gem.authors       = ["Fabian Oudhaarlem"]
+  gem.email         = ["fabian@oldharlem.nl"]
   gem.description   = %q{A rubygem for interacting with the Spree API}
   gem.summary       = %q{A rubygem for interacting with the Spree API}
-  # gem.homepage      = "https://github.com/andrew/spree-api-client"
+  gem.homepage      = "https://github.com/Oldharlem/spree-api-client"
   gem.license       = 'MIT'
 
   gem.files         = `git ls-files`.split($/)
@@ -18,11 +18,11 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency 'hashie', '~> 3.4'
-  gem.add_dependency 'faraday', '~> 0.9'
-  gem.add_dependency 'faraday_middleware', '~> 0.9'
+  gem.add_dependency 'hashie'
+  gem.add_dependency 'faraday'
+  gem.add_dependency 'faraday_middleware'
 
-  gem.add_dependency 'multi_json', '~> 1.4'
+  gem.add_dependency 'multi_json'
   gem.add_dependency 'httparty'#, '~> 0.9'
 
   gem.add_development_dependency 'webmock'

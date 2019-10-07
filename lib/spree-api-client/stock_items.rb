@@ -22,6 +22,10 @@ module Spree
           put("stock_locations/#{location}/stock_items/#{stock_item}", options)
         end
 
+        def batch_update_stock_items(location=1, options={})
+          put("stock_locations/#{location}/stock_items/batch_update", options)
+        end
+
         def delete_stock_item(stock_item, location=1, options={})
           delete("stock_locations/#{location}/stock_items/#{stock_item}", options)
         end
